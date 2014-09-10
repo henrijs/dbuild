@@ -2,6 +2,14 @@ This is custom drupal buildscript.
 
 Basic usage:
 
+$ /build.sh new - Create a new fresh build ready for installation
+$ /build.sh update - Update current build
+$ /build.sh purge - Clean up the current build
+$ /build.sh clean - Remove old builds
+
+
+Setup:
+
 1. Create and set up new settings file:
 
 $ cp conf/global.settings.php conf/your_site_name.settings.php
