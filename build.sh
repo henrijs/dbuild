@@ -59,7 +59,7 @@ if [ -z "$drush" ]; then
 fi
 
 if [ -z "$WKV_SITE_ENV" ]; then
-	error "You need to define WKV_SITE_ENV before using build.sh 'export WKV_SITE_ENV=[yoursettingsfile.settings.php'"
+	error "You need to define WKV_SITE_ENV before using build.sh"
 fi
 
 if [ -e $config_file ]; then
@@ -228,7 +228,7 @@ usage() {
 	echo "  new - Create a new fresh build ready for installation"
 	echo "  update - Update current build"
 	echo "  purge - Clean up the current build"
-	echo "  clean - Remove old builds ($builds_to_keep builds kept)"
+	echo "  clean - Remove old builds"
 }
 
 control_c() {
