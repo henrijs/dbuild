@@ -180,7 +180,7 @@ make_build() {
 		# Store old build dir if it exists
 		if [ -e $build_dir ]
 		then
-			build_time=`date -r $build_dir +"%Y-%m-%d-%H%M%S"`
+			build_time=`date +%Y-%m-%d_%H-%M-%S`
 			mv $build_dir $old_builds_dir/$build_time
 		fi
 	else
