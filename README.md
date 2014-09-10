@@ -5,7 +5,7 @@ Basic usage:
 $ /build.sh new - Create a new fresh build ready for installation
 $ /build.sh update - Update current build
 $ /build.sh purge - Clean up the current build
-$ /build.sh clean - Remove old builds
+$ /build.sh clean - Remove old builds.
 
 Add new modules/libraries/themes in site.make file.
 Fork and update WK installation profile.
