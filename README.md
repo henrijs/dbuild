@@ -13,3 +13,6 @@ $ export WKV_SITE_ENV=your_site_name
 3. Run the script
 
 $ ./build.sh new
+
+
+If you are using OSX you will not be able to create sql dumps for your builds. For now...
