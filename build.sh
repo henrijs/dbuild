@@ -211,12 +211,7 @@ purge_build() {
 remove_old_builds() {
 
 		notice "Removing old builds..."
-        files=($(find $old_builds_dir -mindepth 1 -maxdepth 1 -type d|sort -r))
-        for (( i = 0 ; i < ${#files[@]} ; i++ )) do
-            if [ $i -gt $builds_to_keep ]; then
-            	rm -rf ${files[$i]}
-            fi
-        done
+        find $old_builds_dir -mindepth 1 -maxdepth 1 -type d -exec rm -rf {} +
 }
 
 # Update the current build
