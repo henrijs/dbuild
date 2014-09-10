@@ -12,7 +12,7 @@
 base=$(cd "$(dirname "$0")"; pwd) # Base path
 site_name="site" # Make file name without .make
 site_profile="site" # Site install profile in code/profiles
-config_file="$base/conf/config.sh" # configuration 
+config_file="$base/conf/config.sh" # configuration
 post_make="$base/conf/prepare.sh" # post make
 
 store_old_builds=true
@@ -59,7 +59,7 @@ if [ -z "$drush" ]; then
 fi
 
 if [ -z "$WKV_SITE_ENV" ]; then
-	error "You need to define WKV_SITE_ENV before using build.sh"
+	error "You need to define WKV_SITE_ENV before using build.sh 'export WKV_SITE_ENV=[yoursettingsfile.settings.php'"
 fi
 
 if [ -e $config_file ]; then
@@ -80,7 +80,7 @@ post_make() {
 		name=${file##*/}
 		if [ -d $file -a ! -d $temp_build_dir/$modules_path/$name ]; then
 			ln -s $file $temp_build_dir/$modules_path/$name
-		fi		
+		fi
 	done
 	# Link theme directories
 	for file in $code_themes_dir/*
@@ -88,7 +88,7 @@ post_make() {
 		name=${file##*/}
 		if [ -d $file -a ! -d $temp_build_dir/$themes_path/$name ]; then
 			ln -s $file $temp_build_dir/$themes_path/$name
-		fi		
+		fi
 	done
 	# Link theme directories
 	for file in $code_profiles_dir/*
@@ -96,7 +96,7 @@ post_make() {
 		name=${file##*/}
 		if [ -d $file -a ! -d $temp_build_dir/$profiles_path/$name ]; then
 			ln -s $file $temp_build_dir/$profiles_path/$name
-		fi		
+		fi
 	done
 	if [ -d $files_dir ]; then
 		ln -s $files_dir $temp_build_dir/$files_path
@@ -240,7 +240,7 @@ control_c() {
 	echo ""
 	notice "Cancelled - Previous build remains intact"
 	# if prev build dir exists
-	# remove 
+	# remove
 	exit 1
 }
 
