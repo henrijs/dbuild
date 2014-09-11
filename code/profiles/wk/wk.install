@@ -68,6 +68,9 @@ function wk_install() {
   $full_html_format = (object) $full_html_format;
   filter_format_save($full_html_format);
 
+  variable_set('theme_default', 'bartik');
+  $default_theme = variable_get('theme_default', 'bartik');
+
   // Enable some standard blocks.
   $admin_theme = 'seven';
   $blocks = array(
