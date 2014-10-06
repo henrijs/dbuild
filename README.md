@@ -1,35 +1,38 @@
-About
-=
+# About
+
 
 This is custom drupal buildscript.
 
-Basic usage:
--
-$ /build.sh new - Create a new fresh build ready for installation.
+## Basic usage:
 
-$ /build.sh update - Update current build.
+`/build.sh new ` - Create a new fresh build ready for installation.
 
-$ /build.sh purge - Clean up the current build.
+`/build.sh update` - Update current build.
 
-$ /build.sh clean - Remove old builds.
+`/build.sh purge` - Clean up the current build.
+
+`/build.sh clean` - Remove old builds.
 
 Add new modules/libraries/themes in site.make file.
 Fork and update WK installation profile.
 
 
-Setup:
--
-1. Create and set up new settings file:
+## Setup:
 
-$ cp conf/global.settings.php conf/your_site_name.settings.php
+#### Create and set up new settings file:
 
-2. Tell script that that should be this file to use.
+`cp conf/global.settings.php conf/your_site_name.settings.php`
 
-$ export WKV_SITE_ENV=your_site_name
+#### Tell script that that should be this file to use.
 
-3. Run the script
+`export WKV_SITE_ENV=your_site_name`
 
-$ ./build.sh new
+#### Run the script:
+
+`./build.sh new`
 
 
-If you are using OSX you will not be able to create sql dumps for your builds. For now...
+## To-do
+
+- [ ] Fix sql dump in OSX during purge
+- [ ] Built in backup script
