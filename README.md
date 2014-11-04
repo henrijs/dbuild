@@ -36,3 +36,4 @@ Fork and update WK installation profile.
 
 - [ ] Fix sql dump in OSX during purge
 - [ ] Built in backup script
+- [ ] Run site installation after ./build.sh new
