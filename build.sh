@@ -9,6 +9,16 @@
 #
 ###############################################################################
 
+
+# Some colors
+red=$'\e[1;31m'
+grn=$'\e[1;32m'
+yel=$'\e[1;33m'
+blu=$'\e[1;34m'
+mag=$'\e[1;35m'
+cyn=$'\e[1;36m'
+end=$'\e[0m'
+
 base=$(cd "$(dirname "$0")"; pwd) # Base path
 site_name="site" # Make file name without .make
 site_profile="site" # Site install profile in code/profiles
@@ -45,12 +55,12 @@ settings_file=sites/default/settings.php
 
 # Print a notification message
 notice() {
-	echo -e "\e[1;33m** BUILD NOTICE: $1\e[00m"
+	echo -e "${yel}** BUILD NOTICE: ${end}"
 }
 
 # Print error and exit
 error() {
-	echo -e "\e[1;31m** BUILD ERROR: $1\e[00m"
+	echo -e "${red}** BUILD ERROR: ${end}"
 	exit -1
 }
 
