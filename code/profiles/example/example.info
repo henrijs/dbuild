@@ -1,0 +1,32 @@
+name = Example Site Profile
+core = 7.x
+description = This is example Drupal installation profile. Modify it according to your needs.
+
+; Required core modules
+; ---------------------
+dependencies[] = block
+dependencies[] = contextual
+dependencies[] = comment
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = shortcut
+dependencies[] = toolbar
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = rdf
+
+; Required contrib modules
+; ------------------------
+
+; Required custom modules
+; -----------------------
+
+; Required features
+; -----------------
+
