@@ -129,7 +129,7 @@ include '$settings_directory/$WKV_SITE_ENV.settings.php';" >> $temp_build_dir/$s
 	if [ -e $post_make ]
 	then
 		notice "Post make script..."
-		$post_make $base $temp_build_dir
+		$post_make $base $temp_build_dir $command
 	fi
 }
 
@@ -176,7 +176,7 @@ make_build() {
 
 	notice "Building..."
 
-	$drush $drush_params --root=$temp_build_dir -y --translations=fi make $drush_make_script $temp_build_dir
+	$drush $drush_params --root=$temp_build_dir -y make $drush_make_script $temp_build_dir
 
 	rc=$?
 	if [[ $rc != 0 ]]
